@@ -43,8 +43,8 @@ nav { display: flex; justify-content: space-between; align-items: center; }
 .hero { 
     height: 80vh; 
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("./NK.png");
-    background-size: cover;      /* Changed from 60% to cover */
-    background-position: center; /* Centers the image */
+    background-size: cover ;      /* Changed from 60% to cover */
+    background-position: 40% top; /* Centers the image */
     background-repeat: no-repeat;
     display: flex; 
     align-items: center; 
@@ -110,7 +110,7 @@ nav { display: flex; justify-content: space-between; align-items: center; }
 
 
 .hero-content h1 {
-    font-size: 4.5rem; /* Larger, bolder text */
+    font-size: 3.0rem; /* Larger, bolder text */
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -1px;
