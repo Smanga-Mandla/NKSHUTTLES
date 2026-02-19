@@ -39,18 +39,76 @@ nav { display: flex; justify-content: space-between; align-items: center; }
 .btn-book { background: var(--accent-color); color: #000 !important; padding: 8px 15px; border-radius: 5px; }
 
 /* Hero */
+/* --- Optimized Hero Section --- */
 .hero { 
-    height: 75vh; 
-    /* Changed KN.png to NK.png */
+    height: 80vh; 
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("./NK.png");
-    background-size: 60% auto; 
-    background-position: 50% top;
+    background-size: cover;      /* Changed from 60% to cover */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
     display: flex; 
     align-items: center; 
     justify-content: center; 
     text-align: center; 
     color: white;
+    padding: 0 20px;
 }
+
+/* --- Mobile Menu Toggle Styling --- */
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* --- Responsive Media Query (The Fix) --- */
+@media (max-width: 768px) {
+    .container { padding: 3rem 5%; }
+
+    /* Show hamburger icon */
+    .menu-toggle { display: block; }
+
+    /* Transform nav-links into a mobile dropdown */
+    .nav-links {
+        display: none; /* Hidden by default on mobile */
+        flex-direction: column;
+        width: 100%;
+        background: var(--primary-color);
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        left: 0;
+        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Show menu when active class is added via JS */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    /* Scale down hero text for small screens */
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+
+
 .hero-content h1 {
     font-size: 4.5rem; /* Larger, bolder text */
     font-weight: 900;

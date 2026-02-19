@@ -46,3 +46,23 @@ if (contactForm) {
         this.reset();
     });
 }
+
+const menu = document.querySelector('#mobile-menu');
+const menuLinks = document.querySelector('.nav-links');
+
+// Toggle Mobile Menu
+menu.addEventListener('click', function() {
+    menuLinks.classList.toggle('active');
+    
+    // Optional: Change icon from bars to X
+    const icon = menu.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-times');
+});
+
+// Close mobile menu when a link is clicked
+document.querySelectorAll('.nav-links a').forEach(n => n.addEventListener('click', () => {
+    menuLinks.classList.remove('active');
+    document.querySelector('#mobile-menu i').classList.add('fa-bars');
+    document.querySelector('#mobile-menu i').classList.remove('fa-times');
+}));
