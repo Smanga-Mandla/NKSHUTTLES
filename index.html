@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NK Shuttles | Professional Transport Services</title>
+    <link rel="icon" type="image/png" href="NK.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -219,6 +220,37 @@ footer { background: #222; color: white; text-align: center; padding: 20px; }
 #topBtn {
     position: fixed; bottom: 20px; right: 20px; display: none;
     background: var(--accent-color); border: none; padding: 10px; border-radius: 50%; cursor: pointer;
+}
+
+/* Floating WhatsApp Button */
+#whatsappBtn {
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+    height: 52px;
+    padding: 0 16px;
+    border-radius: 30px;
+    background: #25D366;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    z-index: 1001;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#whatsappBtn i {
+    font-size: 1.3rem;
+}
+
+#whatsappBtn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
 }
 .logo {
     font-size: 1.5rem;
@@ -1028,6 +1060,14 @@ footer { background: #222; color: white; text-align: center; padding: 20px; }
             </div>
              
         </div>
+
+         <div class="fleet-card">
+            <div class="fleet-img">
+                <img src="corolla.png" alt="VW T-Cross">
+               
+            </div>
+             
+        </div> 
     </div>
 </section>
 
@@ -1087,6 +1127,11 @@ footer { background: #222; color: white; text-align: center; padding: 20px; }
     <footer>
         <p>&copy;2026 NK Shuttles (Pty) Ltd. Reg: 2017/325159/07 </p>
     </footer>
+
+    <a id="whatsappBtn" href="https://wa.me/27794413082" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>Chat with us</span>
+    </a>
 
     <button id="topBtn"><i class="fas fa-arrow-up"></i></button>
 
